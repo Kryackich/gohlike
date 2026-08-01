@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3ia5nrxvmjcu"]
+
+[ext_resource type="Script" uid="uid://cro2u2nl7ptfv" path="res://battle_system.gd" id="1_5kv84"]
+
+[node name="BattleSystem" type="Node2D" unique_id=648355008]
+script = ExtResource("1_5kv84")
+
+[node name="TurnCooldown" type="Timer" parent="." unique_id=1093550427]
+one_shot = true
+
+[connection signal="timeout" from="TurnCooldown" to="." method="_on_turn_cooldown_timeout"]

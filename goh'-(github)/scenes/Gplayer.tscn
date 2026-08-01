@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dltnwxfhdcsgj"]
+
+[ext_resource type="Script" uid="uid://dodgdwj55uab8" path="res://scripts/gplayer.gd" id="1_bf314"]
+[ext_resource type="Texture2D" uid="uid://3sf6lsiy5i3t" path="res://sprites/g.png" id="2_20asd"]
+
+[node name="Gplayer" type="Node2D" unique_id=2016072917]
+script = ExtResource("1_bf314")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=117690637]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_20asd")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=652078433]
+offset_left = -64.0
+offset_top = 65.0
+offset_right = 64.0
+offset_bottom = 101.0
+max_value = 1000.0
+
+[node name="TurnMeter" type="ProgressBar" parent="." unique_id=1948074327]
+offset_left = -64.0
+offset_top = 105.0
+offset_right = 64.0
+offset_bottom = 132.0

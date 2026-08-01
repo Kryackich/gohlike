@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b2u4k5jtveonj"]
+
+[ext_resource type="Script" uid="uid://dt3k874jto146" path="res://scripts/main.gd" id="1_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://dltnwxfhdcsgj" path="res://scenes/Gplayer.tscn" id="2_rarhs"]
+[ext_resource type="PackedScene" uid="uid://b3ia5nrxvmjcu" path="res://scenes/Battle_system.tscn" id="2_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://qba55m7v2nfh" path="res://scenes/Enemy.tscn" id="3_rarhs"]
+[ext_resource type="PackedScene" uid="uid://cixae6hsabonu" path="res://scenes/ui.tscn" id="3_vcsgt"]
+
+[node name="Main" type="Node2D" unique_id=1188867939]
+script = ExtResource("1_0bbpv")
+
+[node name="BattleSystem" parent="." unique_id=648355008 instance=ExtResource("2_vcsgt")]
+
+[node name="Gplayer" parent="." unique_id=2016072917 instance=ExtResource("2_rarhs")]
+position = Vector2(1434, 570)
+
+[node name="Enemy" parent="." unique_id=698387513 instance=ExtResource("3_rarhs")]
+position = Vector2(2574, 570)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=451691861]
+position = Vector2(2048, 463)
+zoom = Vector2(0.7, 0.7)
+
+[node name="CanvasLayer" parent="." unique_id=2091087542 instance=ExtResource("3_vcsgt")]
+
+[connection signal="basic_pressed" from="CanvasLayer" to="." method="_on_canvas_layer_basic_pressed"]
+[connection signal="basic_pressed" from="CanvasLayer" to="BattleSystem" method="_on_canvas_layer_basic_pressed"]
+[connection signal="special_pressed" from="CanvasLayer" to="." method="_on_canvas_layer_special_pressed"]
+[connection signal="special_pressed" from="CanvasLayer" to="BattleSystem" method="_on_canvas_layer_special_pressed"]

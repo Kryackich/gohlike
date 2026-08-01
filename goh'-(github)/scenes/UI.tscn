@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cixae6hsabonu"]
+
+[ext_resource type="Script" uid="uid://b1fuh7nc6obd1" path="res://scripts/ui.gd" id="1_5en4g"]
+[ext_resource type="Texture2D" uid="uid://brubpekj5r5wf" path="res://sprites/baseAtk.png" id="2_ua6yw"]
+[ext_resource type="Texture2D" uid="uid://cyniv36t64m7d" path="res://sprites/specialAtk.png" id="3_75u2n"]
+
+[node name="UI" type="CanvasLayer" unique_id=2091087542]
+script = ExtResource("1_5en4g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1864432061]
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.85
+anchor_right = 0.1
+anchor_bottom = 0.85
+offset_top = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+
+[node name="basic" type="Button" parent="HBoxContainer" unique_id=1798212300]
+layout_mode = 2
+text = "BASIC"
+icon = ExtResource("2_ua6yw")
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="special" type="Button" parent="HBoxContainer" unique_id=1940174560]
+layout_mode = 2
+text = "SPECIAL"
+icon = ExtResource("3_75u2n")
+alignment = 0
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="HBoxContainer/basic" to="." method="_on_basic_pressed"]
+[connection signal="pressed" from="HBoxContainer/special" to="." method="_on_special_pressed"]

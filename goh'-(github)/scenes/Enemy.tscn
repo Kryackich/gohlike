@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://qba55m7v2nfh"]
+
+[ext_resource type="Script" uid="uid://bt4nn2swgns2y" path="res://scripts/enemy.gd" id="1_55jtl"]
+[ext_resource type="Texture2D" uid="uid://c8rpcqmnevl8b" path="res://sprites/m.png" id="2_mpr68"]
+
+[node name="Enemy" type="Node2D" unique_id=698387513]
+script = ExtResource("1_55jtl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1995311299]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mpr68")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1497898774]
+offset_left = -64.0
+offset_top = 65.0
+offset_right = 64.0
+offset_bottom = 101.0
+max_value = 1000.0
+
+[node name="TurnMeter" type="ProgressBar" parent="." unique_id=1770491494]
+offset_left = -64.0
+offset_top = 105.0
+offset_right = 64.0
+offset_bottom = 132.0
