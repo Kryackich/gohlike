@@ -1,5 +1,6 @@
 extends Node2D
 
+const STATS = {"hp": 1000, "speed": 200, "damage": 100}
 var stats = {"hp": 1000, "speed": 200, "damage": 100}
 var current_turn_meter = 0
 
@@ -20,5 +21,5 @@ func change_turn_meter(amount):
 func _ready() -> void:
 	$HealthBar.max_value = stats["hp"]
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	change_hp()

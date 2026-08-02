@@ -1,5 +1,6 @@
 extends Node2D
 
+const STATS = {"hp": 500, "speed": 100, "damage": 50}
 var stats = {"hp": 500, "speed": 100, "damage": 50}
 var current_turn_meter
 

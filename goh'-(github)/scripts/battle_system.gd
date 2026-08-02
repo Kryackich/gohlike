@@ -23,7 +23,6 @@ func _ready() -> void:
 		print("player turn")
 		is_player_turn = true
 		
-		
 	else:
 		print("enemy turn")
 		
